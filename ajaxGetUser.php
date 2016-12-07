@@ -2,7 +2,7 @@
 //get the file contents from the server
 If (isset($_REQUEST['file'])) {
 $file = basename($_REQUEST['file']);
-echo file_get_contents('./'.$file);
+echo file_get_contents($file);
 } Else {
 If (is_dir('./') && $handle = opendir('./')) {
 While (False !== ($entry = readdir($handle))) {
